@@ -1,0 +1,32 @@
+create TABLE flights (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              origin TEXT NOT NULL,
+              destination TEXT NOT NULL,
+              duration CHAR NOT NULL
+         );
+
+INSERT INTO flights
+       (origin,destination, duration)
+       VALUES("NEW YORK", "London", 415);
+
+get data out of table:
+            SELECT * FROM FLIGHTS
+            SELECT origin, destination FROM flights;
+
+for particular rows only
+             SELECT * FROM flights WHERE id = 3;
+             SELECT * FROM flights WHERE origin = "NEW YORK";
+
+to see tables in sql command
+             .tables
+
+to present data in a beautiful manner, command is:
+             .mode columns
+             .headers yes
+
+sql command:(for arithmetic expressions)
+   select * from <sql-file-name> where duration > 300;
+
+comparison commands:
+   select * from flights where duration > 500 AND destination = "PARIS";
+      select * from flights where duration > 500 OR destination = "PARIS";
