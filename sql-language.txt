@@ -1,0 +1,19 @@
+create TABLE flights (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              origin TEXT NOT NULL,
+              destination TEXT NOT NULL,
+              duration CHAR NOT NULL
+         );
+
+INSERT INTO flights
+       (origin,destination, duration)
+       VALUES("NEW YORK", "London", 415);
+
+get data out of table:
+            SELECT * FROM FLIGHTS
+            SELECT origin, destination FROM flights;
+
+for particular rows only
+             SELECT * FROM flights WHERE id = 3;
+             SELECT * FROM flights WHERE origin = "NEW YORK";
+
