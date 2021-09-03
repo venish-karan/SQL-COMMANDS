@@ -17,3 +17,12 @@ for particular rows only
              SELECT * FROM flights WHERE id = 3;
              SELECT * FROM flights WHERE origin = "NEW YORK";
 
+to see tables in sql command
+             .tables
+
+to present data in a beautiful manner, command is:
+             .mode columns
+             .headers yes
+
+sql command:
+   select * from <sql-file-name> where duration > 300;
