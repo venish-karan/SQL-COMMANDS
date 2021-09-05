@@ -30,3 +30,34 @@ sql command:(for arithmetic expressions)
 comparison commands:
    select * from flights where duration > 500 AND destination = "PARIS";
       select * from flights where duration > 500 OR destination = "PARIS";
+
+to join two tables:
+   SELECT first, origin, destination 
+     FROM flights JOIN passengers 
+     ON passengers.flights_id = flights.id;
+
+-JOIN / INNER JOIN
+-LEFT OUTER JOIN
+-RIGHT OUTER JOIN
+-FULL OUTER JOIN
+
+optimization:
+  CREATE INDEX name_index ON passengers (column_name);
+
+SQL Injection
+
+If username is:
+  hacker"--
+what happens is that 
+
+SELECT * FROM users WHERE username = "hacker"--" AND password = "";
+
+in SQL -- is the comment symbol like in python we have #
+AND THE HACKER CAN ACCESS ALL THE USERNAME AND PASSWORDS.
+
+To avoid this we can add \.
+but in django we have models for this.
+
+ race conditions:
+    conflicts happen when multiple thing happens simultaneously.
+    ex: liking a post on instagram.
